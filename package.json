@@ -4,7 +4,8 @@
   "description": "Roundhouse kick anyone with these Chuck Norris facts",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,24 @@
   "bugs": {
     "url": "https://github.com/raldenhoven/chucky/issues"
   },
-  "homepage": "https://github.com/raldenhoven/chucky#readme"
+  "homepage": "https://github.com/raldenhoven/chucky#readme",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.2.2",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "browser-sync": "^2.18.8",
+    "browser-sync-webpack-plugin": "^1.1.4",
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.2",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.1",
+    "webpack": "^2.3.2"
+  }
 }
