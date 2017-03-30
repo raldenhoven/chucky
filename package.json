@@ -1,0 +1,19 @@
+{
+  "name": "chucky_facts",
+  "version": "1.0.0",
+  "description": "Roundhouse kick anyone with these Chuck Norris facts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/raldenhoven/chucky.git"
+  },
+  "author": "Raldenhoven",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raldenhoven/chucky/issues"
+  },
+  "homepage": "https://github.com/raldenhoven/chucky#readme"
+}
