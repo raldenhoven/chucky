@@ -8,7 +8,7 @@ import browserSyncPlugin from 'browser-sync-webpack-plugin';
 
 export default {
 	// Basic Webpack settings
-	entry: './assets/index.js',
+	entry: './source/index.js',
 	output: {
 		filename: 'bundle.js',
 		path: path.resolve('./app', 'dist')
@@ -28,6 +28,7 @@ export default {
 					}
 				}
 			},
+			// Use the extractTextPlugin to seperate and concatenate all css to seperate file
 			{
 				test: /\.scss$/,
 				loader: extractTextPlugin.extract({

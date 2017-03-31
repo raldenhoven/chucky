@@ -1,0 +1,12 @@
+@import url(//fonts.googleapis.com/css?family=Acme|Slabo+27px);
+
+$serif : 'Slabo 27px', serif;
+$sans  : 'Acme', sans-serif;
+
+body {
+	font-family: $serif;
+}
+
+h1 {
+	font-family: $sans;
+}
