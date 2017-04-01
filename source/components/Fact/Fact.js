@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './Fact.scss'
+
 import FavoriteButton from '../FavoriteButton/FavoriteButton'
 
 const Fact = () => (

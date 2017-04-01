@@ -1,0 +1,12 @@
+@import '../../style/variables';
+
+.favorite-list{
+	width: 100%;
+	padding: $padding;
+
+	@include mq($from: tablet) {
+		width: 50%;
+		float: left;
+	}
+
+}

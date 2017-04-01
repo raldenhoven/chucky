@@ -1,0 +1,21 @@
+@import '../../style/variables';
+
+.fact {
+	background: grey;
+	position: relative;
+	display: block;
+	min-height: 3em;
+	padding: $padding;
+	padding-right: 4.5em;
+	margin-bottom: 1em;
+
+	.favorite-button {
+		position: absolute;
+		top: $padding-y;
+		right: $padding-x;
+	}
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+}

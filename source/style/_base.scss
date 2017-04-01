@@ -1,7 +1,20 @@
-// apply a natural box layout model to all elements, but allowing components to change
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 12px;
+
+	@include mq($from: tablet) {
+		font-size: 14px;
+	}
+
+	@include mq($from: desktop) {
+		font-size: 18px;
+	}
 }
+
+body {
+	margin: 0;
+}
+
 *, *:before, *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }

@@ -1,5 +1,18 @@
-$padding: .825em 1.65em;
+$padding-y: .825em;
+$padding-x: 1.65em; 
+$padding: $padding-y $padding-x;
 $spacing: 1.65em;
 
 $black: #000;
 $white: #FFF;
+$yellow: #F8E81C;
+
+
+$mq-breakpoints: (
+    mobile:  320px,
+    tablet:  740px,
+    desktop: 980px,
+    wide:    1300px
+);
+
+@import '~sass-mq/mq';

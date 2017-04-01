@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './FavoriteList.scss'
+
 import Fact from '../Fact/Fact'
 
 const FavoriteList = () => (

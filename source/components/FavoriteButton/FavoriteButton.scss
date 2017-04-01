@@ -1,0 +1,41 @@
+@import '../../style/variables';
+
+.favorite-button {
+	background: none;
+	border: none;
+	display: inline-block;
+
+	&:before {
+		content: '';
+		display: block;
+		width: 20px;
+		height: 20px;
+		background-color: $black;
+		-webkit-mask-image: url('./FavoriteButton.svg');
+	}
+	
+	@include mq($from: tablet) {
+		&:before {
+			width: 38px;
+			height: 37px;
+			-webkit-mask-image: url('./FavoriteButton@2x.svg');
+		}
+	}
+
+	&:focus {
+		outline: 0;
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:hover:before,
+	&__favorite:before {
+		background-color: $yellow;
+	}
+
+	&__favorite:hover:before {
+		background-color: $black;
+	}
+}

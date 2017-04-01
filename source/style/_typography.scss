@@ -5,8 +5,11 @@ $sans  : 'Acme', sans-serif;
 
 body {
 	font-family: $serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
 	font-family: $sans;
+	font-size: 3em;
 }

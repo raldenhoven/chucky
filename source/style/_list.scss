@@ -1,7 +1,6 @@
 @import './style/variables';
 
 .list {
-	border: 2px solid $black;
 	list-style:none;
-	padding: $padding;
+	padding: 0;
 }

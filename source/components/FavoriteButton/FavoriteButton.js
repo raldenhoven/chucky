@@ -1,8 +1,9 @@
 import React from 'react'
 
+import './FavoriteButton.scss'
+
 const FavoriteButton = () => (
 	<button className="favorite-button">
-		I am favorite
 	</button>
 )
 
