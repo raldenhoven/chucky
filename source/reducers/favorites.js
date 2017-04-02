@@ -8,16 +8,7 @@ const favorite = (state = {}, action) => {
 
   switch (action.type) {
     case ADD_FAVORITE:
-      // Max of 10 favorites
-      if (facts.length > 9) {
-        return facts
-      }
-
-      // Only add a fact if it is not existing (matching on fact.id)
-      if (facts.findIndex((el) => { return el.id === action.fact.id }) === -1) {
-        facts.push(action.fact)
-      }
-
+      facts.push(action.fact)
       // Return the facts
       return facts
     case REMOVE_FAVORITE:
@@ -42,7 +33,7 @@ const favorites = (state = {}, action) => {
     case REMOVE_FAVORITE:
 		case ADD_FAVORITE:
       return Object.assign({}, state, {
-        facts: favorite(state, action)
+        facts: favorite(state, action),
       })
 		default:
 			return state

@@ -7,11 +7,14 @@ import { combineReducers } from 'redux'
 import randomFacts from './facts'
 // Import the favorite reducer
 import favorites from './favorites'
+// Import the messages reducer
+import messages from './messages'
 
 // Combine reducers
 const reducers = combineReducers({
   randomFacts,
-  favorites
+  favorites,
+  messages
 })
 
 // Export reducers as default

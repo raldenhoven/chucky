@@ -4,9 +4,10 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 // Import actions
 import { fetchFactsIfNeeded, fetchFacts } from '../../actions/facts'
-import { addFavorite, removeFavorite } from '../../actions/favorites'
+import { addToFavorites, removeFavorite } from '../../actions/favorites'
 // Import Components
 import FactList from '../../components/FactList/FactList'
+import Message from '../../components/Message/Message'
 import LoadMoreFactsButton from '../../components/LoadMoreFactsButton/LoadMoreFactsButton'
 // Import styling
 import './ChuckNorrisFactsApp.scss'
@@ -43,7 +44,7 @@ class ChuckNorrisFactsApp extends Component {
 		// Get dispatch
 		const { dispatch } = this.props
 		// Add fact to favorite
-		dispatch(addFavorite(fact))
+		dispatch(addToFavorites(fact))
 	}
 
 	// Function to remove fact from favorites when clicked by user
@@ -57,7 +58,7 @@ class ChuckNorrisFactsApp extends Component {
 	// The html output
 	render() {
 		// Get randomFacts and favorites from props
-		const { randomFacts, favorites } = this.props
+		const { randomFacts, favorites, messages } = this.props
 
 		// Return html output lists are only added to dom when there is content availeble
 		return (
@@ -78,6 +79,10 @@ class ChuckNorrisFactsApp extends Component {
 						<FactList facts={favorites.facts} onFavoriteClick={this.handleRemoveFromFavoriteClick}/>
 					}
 				</aside>
+
+				{messages.message &&
+					<Message msg={messages.message}/>
+				}
 			</div>
 		)
 	}
@@ -87,12 +92,14 @@ class ChuckNorrisFactsApp extends Component {
 ChuckNorrisFactsApp.proptypes = {
 	randomFacts: PropTypes.object.isRequired,
 	favorites: PropTypes.object.isRequired,
+	messages: PropTypes.object.isRequired,
 }
 
 // Map state changes to App props
 const mapStateToProps = (state) => ({
 	randomFacts: state.randomFacts || {},
-	favorites: state.favorites || {}
+	favorites: state.favorites || {},
+	messages: state.messages || {}
 })
 
 // Connect state changes to ChuckNorrisFactsApp and return

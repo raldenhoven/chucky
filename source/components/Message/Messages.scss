@@ -1,0 +1,18 @@
+@import '../shame';
+
+.warning {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: $color-highlight;
+	color: $color-white;
+	text-align: center;
+	font-family: $serif;
+	will-change: transform;
+	transition: transform 500ms ease-in-out;
+
+	&--hidden {
+		transform: translateY(-100%);	
+	}
+	
+}
