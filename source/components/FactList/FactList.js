@@ -1,8 +1,10 @@
 import React, { PropTypes, Component } from 'react'
 
-import './FactList.scss'
-
+// Import Component
 import Fact from '../Fact/Fact'
+
+// Import Styling
+import './FactList.scss'
 
 export default class FactList extends Component {
 	render() {
@@ -18,6 +20,7 @@ export default class FactList extends Component {
 	}
 }
 
+// FactList propTypes
 FactList.propTypes = {
 	facts: PropTypes.array.isRequired,
 	onFavoriteClick: PropTypes.func.isRequired

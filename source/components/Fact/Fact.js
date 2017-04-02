@@ -1,9 +1,10 @@
 import React, { PropTypes, Component } from 'react'
 
-import './Fact.scss'
-
+// Import Component
 import FavoriteButton from '../FavoriteButton/FavoriteButton'
-import { addFavorite } from '../../actions/favorites'
+
+// Import styling
+import './Fact.scss'
 
 export default class Fact extends Component {
 	render() {
@@ -19,6 +20,7 @@ export default class Fact extends Component {
 	}
 }
 
+// Fact propTypes
 Fact.propTypes = {
 	fact: PropTypes.object.isRequired,
 	onFavoriteClick: PropTypes.func.isRequired

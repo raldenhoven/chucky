@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 
+// Import styling
 import './LoadMoreFactsButton.scss'
 
 export default class LoadMoreFactsButton extends Component {
@@ -14,6 +15,7 @@ export default class LoadMoreFactsButton extends Component {
 	}
 }
 
+// LoadMoreFactsButton propTypes
 LoadMoreFactsButton.propTypes = {
   onClick: PropTypes.func.isRequired
 }

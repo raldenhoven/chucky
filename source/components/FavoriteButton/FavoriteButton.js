@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react'
-import { connect } from 'react-redux'
 
+// Import Styling
 import './FavoriteButton.scss'
 
 export default class FavoriteButton extends Component {
@@ -14,6 +14,7 @@ export default class FavoriteButton extends Component {
 	}	
 }
 
+// FavoriteButton propTypes
 FavoriteButton.propTypes = {
 	onClick: PropTypes.func.isRequired,
 	fact: PropTypes.object.isRequired
