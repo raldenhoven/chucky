@@ -3,7 +3,7 @@
 	width: 100%;
 	text-align: center;
 	font-size: 2em;
-	background: url('./style/main-header/bg@mobile.jpg') no-repeat;
+	background: $black;
 	background-size: cover;
 	background-position: center 30%;
 	padding: $padding;
@@ -24,7 +24,6 @@
 				 rgba($black,.1) 0 20px 20px;
 
 	@include mq($from: tablet) {
-		background-image: url('./style/main-header/bg.jpg');
 		padding-bottom: 2em;
 	}
 }

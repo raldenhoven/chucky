@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
 
 import './LoadMoreFactsButton.scss'
 
-const LoadMoreFactsButton = () => (
-	<button className="load-more-facts-button">
-		Get more Chuck Norris Facts
-	</button>
-)
+export default class LoadMoreFactsButton extends Component {
+	render () {
+		const { onClick } = this.props
 
-export default LoadMoreFactsButton
+		return (
+			<button className="load-more-facts-button" onClick={ e => onClick() }>
+				Get more Chuck Norris Facts
+			</button>
+		)
+	}
+}
+
+LoadMoreFactsButton.propTypes = {
+  onClick: PropTypes.func.isRequired
+}

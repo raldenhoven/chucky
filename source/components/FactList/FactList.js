@@ -1,21 +1,24 @@
-import React from 'react'
+import React, { PropTypes, Component } from 'react'
 
 import './FactList.scss'
 
 import Fact from '../Fact/Fact'
-import LoadMoreFactsButton from '../LoadMoreFactsButton/LoadMoreFactsButton'
 
-const FactList = () => (
-	<section className="fact-list">
-		<h1>Random Chuck Norris Facts</h1>
-		<ul className="list">
-			<Fact />
-			<Fact />
-			<Fact />
-			<Fact />
-		</ul>
-		<LoadMoreFactsButton />
-	</section>
-)
+export default class FactList extends Component {
+	render() {
+		const {facts, onFavoriteClick} = this.props
 
-export default FactList
+		return (
+			<ul className="fact-list">
+				{facts.map((fact) =>
+					<Fact key={fact.id} fact={fact} onFavoriteClick={onFavoriteClick}/>
+				)}
+			</ul>
+		)
+	}
+}
+
+FactList.propTypes = {
+	facts: PropTypes.array.isRequired,
+	onFavoriteClick: PropTypes.func.isRequired
+}

@@ -1,14 +1,25 @@
-import React from 'react'
+import React, { PropTypes, Component } from 'react'
 
 import './Fact.scss'
 
 import FavoriteButton from '../FavoriteButton/FavoriteButton'
+import { addFavorite } from '../../actions/favorites'
 
-const Fact = () => (
-	<li className="fact">
-		<FavoriteButton />
-		<p>Chuck Norris once kicked a lorum so hard it became ipsum</p>
-	</li>
-)
+export default class Fact extends Component {
+	render() {
+		const {fact, onFavoriteClick} = this.props
 
-export default Fact
+		// I know dangerouslySetInnerHTML should only be used if we 100% trust the injected data		
+		return (
+			<li className="fact">
+				<FavoriteButton onClick={onFavoriteClick} fact={fact}/>
+				<p dangerouslySetInnerHTML={{__html: fact.joke}}></p>
+			</li>
+		)
+	}
+}
+
+Fact.propTypes = {
+	fact: PropTypes.object.isRequired,
+	onFavoriteClick: PropTypes.func.isRequired
+}

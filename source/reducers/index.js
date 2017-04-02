@@ -1,7 +1,10 @@
-// Fake reducer to kick off the app
-// Remember what the reduce function is
-const fake = (state, action) => {
-  return state
-}
+import { combineReducers } from 'redux'
+import randomFacts from './facts'
+import favorites from './favorites'
 
-export default fake
+const reducers = combineReducers({
+  randomFacts,
+  favorites
+})
+
+export default reducers
