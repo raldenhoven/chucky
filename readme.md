@@ -1,10 +1,10 @@
 # Chuck Norris Joke Application
-
-This is one of my first react/redux applications. To compile the source I used webpack.
+This is one of my first react/redux applications. To compile the source I used webpack. You can find the case I used [here](https://github.com/raldenhoven/chucky/blob/master/case.pdf).
 
 ### Todo:
 * Check code comments
 * Explain source code
+* Explain / Implement the way to always add 10 new facts (without doubles)
 * Write tests
 * Add animations
 * Create Github Pages Page (Basicly the content of the app folder)
