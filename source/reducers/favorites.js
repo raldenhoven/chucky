@@ -5,6 +5,11 @@ const favorite = (state = {}, action) => {
 
   switch (action.type) {
     case ADD_FAVORITE:
+      // Max of 10 favorites
+      if (facts.length > 9) {
+        return facts
+      }
+
       if (facts.findIndex((el) => { return el.id === action.fact.id }) === -1) {
         facts.push(action.fact)
       }
