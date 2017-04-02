@@ -13,7 +13,7 @@ export default class Fact extends Component {
 		return (
 			<li className="fact">
 				<FavoriteButton onClick={onFavoriteClick} fact={fact}/>
-				<p dangerouslySetInnerHTML={{__html: fact.joke}}></p>
+				<p className="fact__text" dangerouslySetInnerHTML={{__html: fact.joke}}></p>
 			</li>
 		)
 	}

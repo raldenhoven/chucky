@@ -1,18 +1,22 @@
-@import '../../style/variables';
+@import '../variables';
 
 .fact {
-	background: grey;
-	position: relative;
 	display: block;
-	min-height: 3em;
-	padding: $padding;
-	padding-right: 4.5em;
-	margin-bottom: 1em;
+	margin-bottom: 2em;
+	background: $color-white;
+	position: relative;
+	padding: 1em 1em;
+	text-align: center;
+	box-shadow: .1em .1em .1em 0 rgba($color-type,0.2);
+	border-radius: .1em;
 
-	.favorite-button {
-		position: absolute;
-		top: $padding-y;
-		right: $padding-x;
+	&__text {
+		margin-top: 2em;
+		&::first-letter {
+			font-size: 3em;
+			font-family: $ruthie;
+			color: $color-highlight;
+		}
 	}
 
 	&:last-child{

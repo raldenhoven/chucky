@@ -1,0 +1,30 @@
+// Responisve / Breakpoints
+$mq-breakpoints: (
+    mobile:  320px,
+    tablet:  740px,
+    desktop: 980px,
+    wide:    1300px
+);
+@import '~sass-mq/mq';
+
+// Typographie
+@import url(//fonts.googleapis.com/css?family=Reenie+Beanie|Ruthie|Fredoka+One|Poiret+One);
+
+$serif : 'Poiret One', serif;
+$sans  : 'Reenie Beanie', sans-serif;
+$ruthie: 'Ruthie', sans-serif;
+
+
+// Colors
+// https://coolors.co/
+$color1: rgba(34, 34, 34, 1);
+$color2: rgba(209, 96, 61, 1);
+$color3: rgba(116, 179, 206, 1);
+$color4: rgba(247, 240, 240, 1);
+$color5: rgba(255, 255, 255, 1);
+
+$color-highlight: $color2;
+$color-hover: $color3;
+$color-type: $color1;
+$color-bg: $color4;
+$color-white: $color5;

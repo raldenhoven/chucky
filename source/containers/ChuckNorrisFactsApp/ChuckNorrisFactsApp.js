@@ -8,6 +8,8 @@ import { addFavorite, removeFavorite } from '../../actions/favorites'
 import FactList from '../../components/FactList/FactList'
 import LoadMoreFactsButton from '../../components/LoadMoreFactsButton/LoadMoreFactsButton'
 
+import './ChuckNorrisFactsApp.scss'
+
 class ChuckNorrisFactsApp extends Component {
 
 	constructor(props) {
@@ -41,14 +43,23 @@ class ChuckNorrisFactsApp extends Component {
 		const { randomFacts, favorites } = this.props
 
 		return (
-			<div>
-				<LoadMoreFactsButton onClick={this.handleFetchClick} />
-				{randomFacts.facts &&
-					<FactList facts={randomFacts.facts} onFavoriteClick={this.handleAddToFavoriteClick}/>
-				}
-				{favorites.facts &&
-					<FactList facts={favorites.facts} onFavoriteClick={this.handleRemoveFromFavoriteClick}/>
-				}
+			<div className="app">
+				<main className="app-facts">
+					<header>
+						<h1>Random Facts</h1>
+					</header>
+					{randomFacts.facts &&
+						<FactList facts={randomFacts.facts} onFavoriteClick={this.handleAddToFavoriteClick}/>
+					}
+					<LoadMoreFactsButton onClick={this.handleFetchClick} />
+				</main>
+
+				<aside className="app-favorites">
+					<h1>Your favorites</h1>
+					{favorites.facts &&
+						<FactList facts={favorites.facts} onFavoriteClick={this.handleRemoveFromFavoriteClick}/>
+					}
+				</aside>
 			</div>
 		)
 	}

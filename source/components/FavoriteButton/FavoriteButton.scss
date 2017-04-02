@@ -1,16 +1,17 @@
-@import '../../style/variables';
+@import '../variables';
 
 .favorite-button {
 	background: none;
 	border: none;
 	display: inline-block;
+	position: absolute;
 
 	&:before {
 		content: '';
 		display: block;
 		width: 20px;
 		height: 20px;
-		background-color: $black;
+		background-color: $color-highlight;
 		-webkit-mask-image: url('./FavoriteButton.svg');
 	}
 	
@@ -21,6 +22,7 @@
 			-webkit-mask-image: url('./FavoriteButton@2x.svg');
 		}
 	}
+	
 
 	&:focus {
 		outline: 0;
@@ -28,14 +30,36 @@
 
 	&:hover {
 		cursor: pointer;
+
+		// Tooltip
+		&:after {
+			content: attr(data-tooltip);
+			display: block;
+			background: $color-white;
+			line-height: 3em;
+			border: 1px solid $color-type;
+			border-radius: 1.5em;
+			padding: 0 2em;
+			position: absolute;
+			top: -4em;
+			left: 3em;
+			white-space: nowrap;
+			transform: translateX(-50%);
+		}
 	}
 
-	&:hover:before,
-	&__favorite:before {
-		background-color: $yellow;
+	&:hover:before{
+		background-color: $color-hover;
 	}
 
-	&__favorite:hover:before {
-		background-color: $black;
+
+	.app-favorites & {
+		&:before {
+			background-color: $color-hover;
+		}
+
+		&:hover:before {
+			background-color: $color-highlight;			
+		}
 	}
 }

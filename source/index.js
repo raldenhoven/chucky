@@ -10,10 +10,6 @@ import configureStore from './store/configureStore'
 // Import the ChuckNorris App
 import App from './containers/ChuckNorrisFactsApp/ChuckNorrisFactsApp.js'
 
-// Import the base styling
-import './style.scss'
-
-
 const store = configureStore()
 
 // Render app the dom
@@ -21,5 +17,5 @@ render(
 	<Provider store={store}>
 		<App />
 	</Provider>,
-	document.getElementById('main')
+	document.getElementById('root')
 );

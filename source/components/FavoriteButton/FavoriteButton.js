@@ -8,7 +8,7 @@ export default class FavoriteButton extends Component {
 		const { fact, onClick } = this.props
 
 		return (
-			<button className="favorite-button" onClick={ () => onClick(fact) }>
+			<button className="favorite-button" onClick={ () => onClick(fact) } data-tooltip="Click to add to or remove from favorite">
 			</button>
 		)
 	}	

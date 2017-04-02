@@ -1,17 +1,18 @@
-@import '../../style/variables';
+@import '../variables';
 
 .load-more-facts-button {
-	padding: $padding;
+	padding: 1em 2em;
 	border: none;
-	color: $white;
-	background: $black;
 	font-size: 1.12em;
+	font-family: $serif;
+	display: block;
+	margin: 1em auto;
 
 	&:focus {
 		outline: 0;
 	}
 
 	&:hover {
-		background: lighten($black, 30%);
+		//background: lighten($black, 30%);
 	}
 }

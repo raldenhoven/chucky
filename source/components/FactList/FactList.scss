@@ -1,12 +1,5 @@
-@import '../../style/variables';
-
 .fact-list{
 	width: 100%;
-	padding: $padding;
-
-	@include mq($from: tablet) {
-		width: 50%;
-		float: left;
-	}
-
+	padding: 0 2em;
+	margin: 2em 0;
 }
