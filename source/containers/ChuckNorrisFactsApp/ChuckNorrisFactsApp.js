@@ -64,7 +64,7 @@ class ChuckNorrisFactsApp extends Component {
 			<div className="app">
 				<main className="app-facts">
 					<header>
-						<h1>Random Facts</h1>
+						<h1>Random Chuck Norris facts</h1>
 					</header>
 					{randomFacts.facts &&
 						<FactList facts={randomFacts.facts} onFavoriteClick={this.handleAddToFavoriteClick}/>

@@ -29,10 +29,11 @@ body {
 	h1 {
 		font-family: $serif;
 		text-transform: uppercase;
-		font-size: 2em;
+		font-size: 1.658em;
 		display: block;
 		text-align: center;
 		margin: 1em 0 .5em;
+		padding: 0 1em;
 	}
 
 	&:after {

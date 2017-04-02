@@ -1,9 +1,10 @@
 # Chuck Norris Joke Application
-This is one of my first react/redux applications. To compile the source I used webpack. You can find the case I used [here](https://github.com/raldenhoven/chucky/blob/master/case.pdf).
+This is one of my first react/redux applications. To compile the source I used webpack. You can find the case I used [here](https://github.com/raldenhoven/chucky/blob/master/case.pdf). I did not implement the function to automaticly add a random joke every 5 seconds to the favorite list.
 
 ### Todo:
 * Write tests
 * Add animations
+* Implement warnings (Could not add to Favorites because there are already 10 items)
 * Create Github Pages Page (Basicly the content of the app folder)
 
 ## Instalation
