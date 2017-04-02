@@ -1,6 +1,5 @@
 import { REQUEST_FACTS, RECEIVE_FACTS } from '../actions/facts'
 
-
 const facts = (state = { facts: [] }, action) => {
 	switch (action.type) {
 		case RECEIVE_FACTS:
