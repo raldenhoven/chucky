@@ -7,8 +7,8 @@ import { fetchFactsIfNeeded, fetchFacts } from '../../actions/facts'
 import { addToFavorites, removeFavorite } from '../../actions/favorites'
 // Import Components
 import FactList from '../../components/FactList/FactList'
-import Message from '../../components/Message/Message'
 import LoadMoreFactsButton from '../../components/LoadMoreFactsButton/LoadMoreFactsButton'
+import MessageCenter from '../../components/MessageCenter/MessageCenter'
 // Import styling
 import './ChuckNorrisFactsApp.scss'
 
@@ -79,10 +79,10 @@ class ChuckNorrisFactsApp extends Component {
 						<FactList facts={favorites.facts} onFavoriteClick={this.handleRemoveFromFavoriteClick}/>
 					}
 				</aside>
-
-				{messages.message &&
-					<Message msg={messages.message}/>
+				{messages.items &&
+					<MessageCenter items={messages.items} />
 				}
+				
 			</div>
 		)
 	}
@@ -91,15 +91,14 @@ class ChuckNorrisFactsApp extends Component {
 // Define default props
 ChuckNorrisFactsApp.proptypes = {
 	randomFacts: PropTypes.object.isRequired,
-	favorites: PropTypes.object.isRequired,
-	messages: PropTypes.object.isRequired,
+	favorites: PropTypes.object.isRequired
 }
 
 // Map state changes to App props
 const mapStateToProps = (state) => ({
 	randomFacts: state.randomFacts || {},
 	favorites: state.favorites || {},
-	messages: state.messages || {}
+	messages: state.messages || {items: []}
 })
 
 // Connect state changes to ChuckNorrisFactsApp and return

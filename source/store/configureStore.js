@@ -30,8 +30,8 @@ export default function configureStore() {
  	)
 
 	// Subscribe to changes in the store
- 	store.subscribe(() => {
- 		// Save changes in favorites to localstorage
+	store.subscribe(() => {
+		// Save changes in favorites to localstorage
 		saveState({
 			favorites: store.getState().favorites
 		})

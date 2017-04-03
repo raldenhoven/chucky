@@ -4,7 +4,6 @@ This is one of my first react/redux applications. To compile the source I used w
 ### Todo:
 * Write tests
 * Add animations
-* Implement warnings (Could not add to Favorites because there are already 10 items)
 * Create Github Pages Page (Basicly the content of the app folder)
 
 ## Instalation

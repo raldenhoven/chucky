@@ -1,8 +1,8 @@
 // The default actions, in this way the actual string is only defined once
 export const ADD_FAVORITE = 'ADD_FAVORITE'
 export const REMOVE_FAVORITE = 'REMOVE_FAVORITE'
-export const MAX_FAVORITES = 'MAX_FAVORITES'
-export const EXISTING_FAVORITE = 'EXISTING_FAVORITE'
+// Get the action names from the actions/favorites
+import { addMessage } from './messages'
 
 const addFavorite = (fact) => {
 	return {
@@ -11,31 +11,21 @@ const addFavorite = (fact) => {
 	}
 }
 
-const maxFavorites = () => {
-	return {
-		type: MAX_FAVORITES,
-		msg: 'Maximum of favorites reached'
-	}
-}
-
-const existingFavorites = () => {
-	return {
-		type: EXISTING_FAVORITE,
-		msg: 'Fact already saved'
-	}
-}
-
 // ADD_FAVORITE action
 export const addToFavorites = (fact) => {
 	return (dispatch, getState) => {
 		// Test if Maximun of 10 favorites is reached
 		if (maxFavoritesReached(getState())) {
-			return dispatch(maxFavorites())
+			return dispatch(addMessage({
+				msg: 'Maximum of favorites reached'
+			}))
 		}
 
 		// Check if fact is not existing in favorites
 		if (alreadyExistsInFavorite(fact, getState())) {
-			return dispatch(existingFavorites())
+			return dispatch(addMessage({
+				msg: 'Fact already saved'
+			}))
 		}
 
 		return dispatch(addFavorite(fact))
